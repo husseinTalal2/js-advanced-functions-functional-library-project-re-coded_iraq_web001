@@ -136,20 +136,18 @@ const fi = (function() {
     },
 
     keys: function(obj) {
-      // Using for loop
-      const keys = []
-      for (let key in obj){
-        keys.push(key)
-      }
+      const keys = Object.keys(obj)
+      // for (let key in obj){
+      //   keys.push(key)
+      // }
       return keys
     },
 
     values: function(obj) {
-      // Using for loop
-      const values = []
-      for (let key in obj){
-        values.push(obj[key])
-      }
+      const values = Object.values(obj)
+      // for (let key in obj){
+      //   values.push(obj[key])
+      // }
       return values
     },
   }
