@@ -60,7 +60,7 @@ const fi = (function() {
           arr.push(collection[i])
         }
 
-      return newArr
+      return arr
     },
 
   }
