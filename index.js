@@ -96,17 +96,17 @@ const fi = (function() {
       },
 
       flatten: function(collection, shallow) {
-        const arr=[];
-        if (!Array.isArray(collection)) return arr.push(collection)
+        const newArr=[];
+        if (!Array.isArray(collection)) return newArr.push(collection)
         if (shallow) {
           for (let val of collection)
-            Array.isArray(val) ? this.unpack(arr, val) : arr.push(val)
+            Array.isArray(val) ? this.unpack(newArr, val) : newArr.push(val)
         } else {
           for (let val of collection) {
-            this.flatten(val, false, arr)
+            this.flatten(val, false, newArr)
           }
         }
-        return arr
+        return newArr
       },
       uniqSorted: function(collection, iteratee) {
       const sorted = [collection[0]]
