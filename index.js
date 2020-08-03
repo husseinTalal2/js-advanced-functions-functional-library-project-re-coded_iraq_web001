@@ -142,6 +142,16 @@ const fi = (function() {
     values: function(obj) {
       return Object.values(obj)
     },
+
+    functions: function(obj) {
+      const functionNames = []
+      for (let key in obj) {
+        if (typeof obj[key] === "function"){
+          functionNames.push(key)
+        }
+      }
+      return functionNames.sort()
+    }
   }
 })()
 
