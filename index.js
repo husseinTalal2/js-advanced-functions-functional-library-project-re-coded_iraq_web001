@@ -68,7 +68,7 @@ const fi = (function() {
    },
 
    first: (collection, n=0)=>{
-     return (n===0)? collection.slice(0): collection.slice(0,n);
+     return (n===0)? collection[0]: collection.slice(0,n);
    }
   }
 })()
