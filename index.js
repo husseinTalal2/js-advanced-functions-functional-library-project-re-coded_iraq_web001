@@ -72,7 +72,7 @@ const fi = (function() {
    },
 
    last: (collection, n=0) => {
-     return (n===0)? collection[collection.length-1]: collection.slice(collection.length-1, -n)
+     return (n===0)? collection[collection.length-1]: collection.slice(-n)
    }
   }
 })()
