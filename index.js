@@ -73,6 +73,14 @@ const fi = (function() {
 
    last: (collection, n=0) => {
      return (n===0)? collection[collection.length-1]: collection.slice(-n)
+   },
+
+   compact: (collection) => {
+     const arr = []
+     for(let i = 0 ; i<collection.length ; i++){
+       if(!!collection[i]) arr.push(collection[i])
+     }
+     return arr;
    }
   }
 })()
