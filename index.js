@@ -90,12 +90,12 @@ const fi = (function() {
       })
     },
 
-    unpack: function(receiver, arr) {
+    unpack: (receiver, arr) => {
         for (let val of arr)
           receiver.push(val)
       },
 
-      flatten: function(collection, shallow, arr=[]) {
+      flatten: (collection, shallow, arr=[]) => {
         if (!Array.isArray(collection)) return arr.push(collection)
         if (shallow) {
           for (let val of collection)
@@ -107,7 +107,7 @@ const fi = (function() {
         }
         return arr
       },
-      uniqSorted: function(collection, iteratee) {
+      uniqSorted: (collection, iteratee) => {
       const sorted = [collection[0]]
       for (let i = 1; i < collection.length; i++) {
         if (sorted[i-1] !== collection[i])
@@ -116,7 +116,7 @@ const fi = (function() {
       return sorted
     },
 
-    uniq: function(collection, sorted=false, iteratee=false) {
+    uniq: (collection, sorted=false, iteratee=false) => {
       if (sorted) {
         return fi.uniqSorted(collection, iteratee)
       } else if (!iteratee) {
