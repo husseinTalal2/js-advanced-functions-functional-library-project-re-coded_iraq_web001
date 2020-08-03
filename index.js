@@ -67,6 +67,9 @@ const fi = (function() {
      return (collection instanceof Array) ? collection.length : Object.keys(collection).length
    },
 
+   first: (collection, n=0)=>{
+     return collection.slice(0,n);
+   }
   }
 })()
 
