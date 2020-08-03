@@ -90,12 +90,12 @@ const fi = (function() {
       })
     },
 
-    unpack: (receiver, arr) => {
+    unpack: function(receiver, arr) {
         for (let val of arr)
           receiver.push(val)
       },
 
-      flatten: (collection, shallow, newArr=[]) => {
+      flatten: function(collection, shallow, newArr=[]) {
         if (!Array.isArray(collection)) return newArr.push(collection)
         if (shallow) {
           for (let val of collection)
