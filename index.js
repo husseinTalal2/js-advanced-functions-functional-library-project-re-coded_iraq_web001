@@ -48,6 +48,16 @@ const fi = (function() {
       return undefined
     },
 
+    filter: (collection, predicate) => {
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
+
+      const arr = []
+      for (let i = 0; i < collection.length; i++)
+        if (predicate(collection[i])) newArr.push(collection[i])
+
+      return newArr
+    },
 
   }
 })()
