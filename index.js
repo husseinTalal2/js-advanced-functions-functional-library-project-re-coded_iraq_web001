@@ -81,7 +81,14 @@ const fi = (function() {
        if(!!collection[i]) arr.push(collection[i])
      }
      return arr;
-   }
+   },
+
+   sortBy: (collection, cb) => {
+      const arr = [...collection]
+      return arr.sort(function(a, b) {
+        return cb(a) - cb(b)
+      })
+    },
   }
 })()
 
