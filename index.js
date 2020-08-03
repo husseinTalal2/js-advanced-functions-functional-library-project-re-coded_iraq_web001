@@ -57,7 +57,7 @@ const fi = (function() {
       const arr = []
       for (let i = 0; i < collection.length; i++)
         if (predicate(collection[i])) {
-          newArr.push(collection[i])
+          arr.push(collection[i])
         }
 
       return newArr
