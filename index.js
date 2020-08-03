@@ -66,7 +66,7 @@ const fi = (function() {
     size: (collection) => {
      return (collection instanceof Array) ? collection.length : Object.keys(collection).length
    },
-   
+
   }
 })()
 
