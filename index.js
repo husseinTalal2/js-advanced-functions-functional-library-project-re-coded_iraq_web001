@@ -63,6 +63,10 @@ const fi = (function() {
       return arr
     },
 
+    size: (collection) => {
+     return (collection instanceof Array) ? collection.length : Object.keys(collection).length
+   },
+   
   }
 })()
 
