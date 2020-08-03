@@ -89,6 +89,24 @@ const fi = (function() {
         return cb(a) - cb(b)
       })
     },
+
+    flatten: function(collection, shallow) {
+      const  newArr=[];
+      function unpack(receiver, arr) {
+        for (let val of arr)
+          receiver.push(val)
+      },
+      if (!Array.isArray(collection)) return newArr.push(collection)
+      if (shallow) {
+        for (let val of collection)
+          Array.isArray(val) ? unpack(newArr, val) : newArr.push(val)
+      } else {
+        for (let val of collection) {
+          this.flatten(val, false, newArr)
+        }
+      }
+      return newArr
+    },
   }
 })()
 
