@@ -20,9 +20,9 @@ const fi = (function() {
      const array = []
 
      for (let i = 0; i < collection.length; i++)
-       newArr.push(cb(collection[i]))
+       array.push(cb(collection[i]))
 
-     return newArr
+     return array
     },
 
     reduce: function() {
