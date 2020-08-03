@@ -136,19 +136,11 @@ const fi = (function() {
     },
 
     keys: function(obj) {
-      const keys = Object.keys(obj)
-      // for (let key in obj){
-      //   keys.push(key)
-      // }
-      return keys
+      return Object.keys(obj)
     },
 
     values: function(obj) {
-      const values = Object.values(obj)
-      // for (let key in obj){
-      //   values.push(obj[key])
-      // }
-      return values
+      return Object.values(obj)
     },
   }
 })()
