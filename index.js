@@ -43,7 +43,9 @@ const fi = (function() {
         collection = Object.values(collection)
 
       for (let i = 0; i < collection.length; i++)
-        if (predicate(collection[i])) return collection[i]
+        if (predicate(collection[i])) {
+          return collection[i]
+        }
 
       return undefined
     },
@@ -54,7 +56,9 @@ const fi = (function() {
 
       const arr = []
       for (let i = 0; i < collection.length; i++)
-        if (predicate(collection[i])) newArr.push(collection[i])
+        if (predicate(collection[i])) {
+          newArr.push(collection[i])
+        }
 
       return newArr
     },
