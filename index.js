@@ -135,11 +135,11 @@ const fi = (function() {
       }
     },
 
-    keys: function(obj) {
+    keys: (obj) => {
       return Object.keys(obj)
     },
 
-    values: function(obj) {
+    values: (obj) => {
       return Object.values(obj)
     },
 
