@@ -25,9 +25,18 @@ const fi = (function() {
      return array
     },
 
-    reduce: function() {
+    reduce: (c = [], cb = () => {}, acc) => {
+			let collection = c.slice(0)
+			if (!acc) {
+				acc = collection[0]
+				collection = collection.slice(1)
+			}
 
-    },
+			for (let i = 0; i < collection.length; i++) {
+				acc = cb(acc, collection[i], collection)
+			}
+			return acc;
+		},
 
     functions: function() {
 
