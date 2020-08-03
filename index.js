@@ -38,8 +38,14 @@ const fi = (function() {
 			return acc;
 		},
 
-    functions: function() {
+    find: (collection, predicate) => {
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
 
+      for (let idx = 0; i < collection.length; i++)
+        if (predicate(collection[i])) return collection[i]
+
+      return undefined
     },
 
 
